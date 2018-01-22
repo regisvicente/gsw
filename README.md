@@ -1,4 +1,4 @@
-# gsw
+# GSW
 Teste de seleção Angular + Java
 
 ## Frameworks utilizados
