@@ -30,6 +30,9 @@ public class BancoService {
 
 	public List<String> sacar(int id, BigDecimal valor) throws Exception {
 		
+				
+		 IsMultiploDeDez(valor);
+	
 		saqueSimultaneo++;
 		
 		try
@@ -50,6 +53,12 @@ public class BancoService {
 		}
 		
 
+	}
+
+	private void IsMultiploDeDez(BigDecimal valor) throws Exception {
+		if (valor.remainder(new BigDecimal("10")).compareTo(new BigDecimal("0")) > 0) {
+			 throw new Exception("Apenas valores Multiplos de 10");
+		 }
 	}
 
 	private void calcularCedulas(BigDecimal valor) {
