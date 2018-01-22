@@ -1,0 +1,52 @@
+<div class="topo-titulo">
+  <h5 >Clientes</h5>
+  <a [routerLink]="['/adm']">Dashboard</a> <label class="grey-text">/</label>
+  <a class="grey-text active">Listar</a>
+</div>
+
+<div class ="tela">
+  <div class="z-depth-2">
+      <nav>
+          <div class="nav-wrapper">    
+              <ul> 
+                  <li><a [routerLink]="['novo']" ><i class="material-icons left">add</i>Adicionar</a></li>   
+              </ul>
+          </div>
+      </nav>
+      
+      <div class="formulario">
+          <table class="bordered highlight">
+              <thead>
+                <tr>
+                  <th width="90px">Código</th>
+                  <th>Nome</th>
+                  <th>Saldo</th>
+                  <th width="50px"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let registro of registros" class="ponteiro-mouse">
+                  <td [routerLink]="['editar', registro.id]">{{ registro.id }}</td>
+                  <td [routerLink]="['editar', registro.id]">{{ registro.nome }}</td>
+                  <td [routerLink]="['editar', registro.id]">{{ registro.saldo | number:'1.2'}}</td>
+                  <td class="center">
+                    <a class="modal-trigger" href="#modalExcluir"(click)="desejaExcluir(registro.id)"><i class="material-icons">delete</i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+  </div>
+  
+</div>
+
+<div id="modalExcluir" class="modal">
+<div class="modal-content">
+  <h4>Excluir</h4>
+  <p>Deseja excluir este Registro?</p>
+</div>
+<div class="modal-footer">
+  <a class="modal-action modal-close waves-effect waves-green btn-flat" (click)="excluir(idRegistro)">Sim</a>
+  <a class="modal-action modal-close waves-effect waves-green btn-flat">Não</a>
+</div>
+</div>

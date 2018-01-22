@@ -1,0 +1,10 @@
+span.logo-text {
+    font-size: 26px;
+    padding-left: 8px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+h1.logo-wrapper {
+    margin: 0;
+}

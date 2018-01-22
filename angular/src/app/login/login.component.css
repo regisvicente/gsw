@@ -1,0 +1,25 @@
+#parent {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   background-color: #00bcd4
+}
+
+#form_login {
+    display:table;/* shrinks to fit content */
+    margin:auto;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+@media (min-width: 600px) 
+{
+    #form_login
+   {
+    width: 450px;
+   }
+}
+

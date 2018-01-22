@@ -1,0 +1,72 @@
+<div class="topo-titulo">
+  <h5>Clientes</h5>
+  <a [routerLink]="['/adm']">Dashboard</a> <label class="grey-text">/</label>
+  <a [routerLink]="['/adm','clientes']">Listar</a> <label class="grey-text">/</label>
+  <a class="grey-text active">Clientes</a>
+</div>
+
+<div class="tela">
+
+  <div class="z-depth-2">
+      <nav>
+          <div class="nav-wrapper">
+              <div class="row"><div class="col s12">Cadastro<i class="material-icons left">description</i></div></div>
+          </div>
+      </nav>
+
+      <div class="formulario">
+          
+              <form class="row" [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="id" type="text" formControlName="id">
+                      <label for="id">Código</label>
+                    </div>
+                  </div>
+          
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="nome" type="text" formControlName="nome" [ngClass]="aplicaCSSErro('nome')">
+                      <label for="nome" data-error="Campo Obrigatório">Nome</label>
+                    </div>
+                  </div>
+          
+                  <div class="row">
+                    <div class="input-field col s12 m6">
+                      <input id="senha" type="password" formControlName="senha" [ngClass]="aplicaCSSErro('senha')">
+                      <label for="senha" data-error="Campo Obrigatório">Senha</label>
+                    </div>
+          
+                    <div class="input-field col s12 m6">
+                      <input id="senha" type="password" formControlName="senha" [ngClass]="aplicaCSSErro('senha')">
+                      <label for="senha" data-error="Campo Obrigatório">Confirmar Senha</label>
+                    </div>
+          
+                  </div>
+          
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="saldo" type="text" formControlName="saldo" [ngClass]="aplicaCSSErro('saldo')">
+                      <label for="saldo" data-error="Campo Obrigatório">Saldo</label>
+                    </div>
+                  </div>
+          
+                </div>
+                <div class="col s12">
+                  <div class="right">
+                    <button class="btn waves-effect waves-light" type="submit">Salvar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+          
+            </div>
+  </div>
+  
+</div>
+<!-- <app-form-debug [form]="formulario">
+</app-form-debug>  -->

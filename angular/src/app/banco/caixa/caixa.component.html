@@ -1,0 +1,67 @@
+<div id="parent">
+
+    <div id="form_login">
+
+        <div class="z-depth-2">
+            <nav>
+                <div class="nav-wrapper">
+                    <ul>
+                        <li>
+                            <a>Saque da Conta Bancária</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="formulario">
+
+                    <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix ">account_circle</i> 
+                                <input id="valor" type="text" [(ngModel)]="usuario.nome" disabled>
+                                <label for="saldo" class="active">Nome do Cliente</label>
+                            </div>       
+                    </div>
+
+                    <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix ">account_balance</i> 
+                                <input id="valor" type="text" [(ngModel)]="usuario.saldo" disabled>
+                                <label for="saldo" class="active">Saldo Atual</label>
+                            </div>       
+                    </div>                 
+
+                <form class="col s12" [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix ">attach_money</i>
+                            <input id="valor" type="text" formControlName="valor" [ngClass]="aplicaCSSErro('valor')">
+                            <label for="valor" data-error="Campo Obrigatório" class="active">Valor do Saque</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn waves-effect waves-light" type="submit">Sacar
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                        <button class="btn waves-effect waves-light right" (click)="onLogout()">logout
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="cedulas">
+            <ul>
+                <li *ngFor="let nota of cedulas">
+                    {{ nota }}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

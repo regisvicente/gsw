@@ -1,0 +1,36 @@
+<div id="parent">
+
+    <div id="form_login" class="z-depth-2">
+
+        <div class="row center">
+            <img [src]="imgLogo">
+        </div>
+        
+
+        <form class="col s12" [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix ">account_circle</i>
+                <input id="usuario" type="text" formControlName="usuario" [ngClass]="aplicaCSSErro('usuario')">
+                <label for="usuario" data-error="Campo Obrigatório">Usuário</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="senha" type="password" formControlName="senha" [ngClass]="aplicaCSSErro('senha')">
+                <label for="senha" data-error="Campo Obrigatório">Senha</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit">Login
+              <i class="mdi-content-send right"></i>
+            </button>
+          </div>
+        </form>
+    </div>
+</div>
+
+

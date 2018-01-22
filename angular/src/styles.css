@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #F9F9F9;
+}
+
+header, main, footer {
+    padding-left: 240px;
+}   
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0px;    
+    }
+}
+
+.topo-titulo {
+    padding: 15px;  
+    background-color: #f3f3f3;
+}
+
+.tela {
+    padding: 15px;  
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 24px;  
+}
+
+.formulario h5 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.formulario .input-field label {
+    width: 100%;
+}
+
+.ponteiro-mouse {
+    cursor: pointer
+}
+
+/* mobile */
+.topo{
+    top: 50px;
+    position: relative;
+}
+.titulo {
+    font-size: 20px;
+}
+
+.margem-zero {
+    margin-bottom: 0px;
+}
