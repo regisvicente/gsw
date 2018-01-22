@@ -47,3 +47,5 @@ Após os clientes serem cadastrados na área administrativa, o usuario deverá e
 username postgres
 password teste123
 ```
+## Angular
+Inicializar o projeto com o comando **npm start** para rodar as configuração do arquivo proxy.conf.json  
